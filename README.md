@@ -32,7 +32,7 @@ cmake ..
 make
 ```
 
-Run with ./fbd in the directory. Or put it in PATH.
+Run with `./fbd` in the directory. Or put it in PATH.
 
 ## Contributing
 
