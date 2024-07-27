@@ -3,7 +3,7 @@
 FBD is a textual software in Shell or Hell(as ya want, pal) and mainly for Arch (BTW). So read jokes, and everything ya want. huh. <br>
 
 ## Technical Badges
-![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 <br>
 
