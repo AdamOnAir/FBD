@@ -7,11 +7,32 @@ FBD is a textual software in Shell or Hell(as ya want, pal) and mainly for Arch 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 <br>
 
-## Compile & Commands
+## Compile
+
+To Install the leagecy Rust release :
 ```bash
 cargo install fbd-rs
 fbd-rs
 ```
+
+To Install the new C version :
+```bash
+git clone https://gitHub.com/FBDev64/FBD.git
+cd FBD
+gcc -o fbd main.c
+```
+
+Or compile with CMake and Make instead of gcc:
+```bash
+git clone https://gitHub.com/FBDev64/FBD.git
+cd FBD
+mkdir build && cd build
+cmake ..
+make
+```
+
+Run with ./fbd in the directory. Or put it in PATH.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
