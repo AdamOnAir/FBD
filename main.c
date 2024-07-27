@@ -30,6 +30,8 @@ int main(void) {
             time(&rawtime);
             timeinfo = localtime(&rawtime);
             printf("The time is %d:%d:%d\n", timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
+        } else if (strcmp(input, "dog") == 0 ) {
+            printf("Hmm. So, you want to know the Universe's secrets ?\n Password : 3310\n Format : Unicode\n Link : https://pastebin.com/v4vtCuC3\n ");
         } else {
             printf("Unknown command!\n");
         }
