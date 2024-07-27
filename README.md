@@ -8,7 +8,7 @@ FBD is a textual software in a Terminal Emulator designed for Linux. So read jok
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 <br>
 
-## Compile
+## Compile : Linux
 
 Compile with GCC:
 ```bash
@@ -27,6 +27,10 @@ make
 ```
 
 Run with `./fbd` in the directory. Or put it in PATH.
+
+## Execute : MS Windows
+
+To execute on MS Windows, just download the executable from [the Releases section.](https://github.com/FBDev64/FBD/releases)
 
 ## Contributing
 
