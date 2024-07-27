@@ -6,6 +6,7 @@
 #include <string.h>
 
 int joke(void);
+int quiz(void);
 
 int main(void) {
     printf("Read puns, that's it...\n");
@@ -84,4 +85,71 @@ int joke(void) {
     int random_index = rand() % num_puns;
     printf("%s\n", puns[random_index]);
     return 0;
+}
+
+int quiz(void) {
+    int total_points;
+    printf("A Quiz about the GAME!");
+    printf("Your score will be calculated, you will receive a certificate.");
+    printf("\n");
+
+    // Questions
+    char q1 = "Who is the creator of Undertale?";
+    char q2 = "What is the name of the human protagonist in \"Undertale\"?";
+    char q3 = "What are the three main routes players can take in \"Undertale\"?";
+    char q4 = "What is the name of the flower that guides the player at the beginning of the game?";
+    char q5 = "Who is the king of the Underground?";
+    char q6 = "What is the name of the skeleton brothers in \"Undertale\"?";
+    char q7 = "Who is the scientist that helps the player in the True Pacifist route?";
+    char q8 = "What is the name of the fish-like royal guard captain?";
+    char q9 = "What item do you use to save your progress in \"Undertale\"?";
+    char q10 = "Who is the final boss in the Genocide route?";
+    char q11 = "What is the name of Toriel's ex-husband?";
+    char q12 = "What is the name of the robot that Alphys created?";
+    char q13 = "Who teaches you how to solve the first few puzzles in the Ruins?";
+    char q14 = "What is the currency used in \"Undertale\"?";
+    char q15 = "What song plays during Sans' boss fight?";
+    char q16 = "What is the name of the Temmie village shopkeeper?";
+    char q17 = "What is the name of Asriel's alter ego in the game?";
+    char q18 = "Who is the antagonist in the Neutral and True Pacifist routes?";
+    char q19 = "What is the name of the area where you encounter Papyrus?";
+    char q20 = "What item does Undyne give you in the True Pacifist route to help you?";
+    char q21 = "What is the title of the song that plays during Asgore's battle?";
+    char q22 = "What is the name of the area where you fight Undyne?";
+    char q23 = "Who is the first monster you encounter in the game?";
+    char q24 = "What is the name of the spider boss in Hotland?";
+    char q25 = "Who do you fight in the CORE area?";
+    char q26 = "What is the name of the small dog that appears in various places throughout the game?";
+    char q27 = "What is the name of the secret lab that belongs to Alphys?";
+    char q28 = "What is the name of the song that plays when you meet Toriel for the first time?";
+
+    // Answers
+    char a1 = "Toby Fox";
+    char a2 = "Frisk";
+    char a3 = "Pacifist, Neutral, Genocide";
+    char a4 = "Flowey";
+    char a5 = "Asgore Dreemurr";
+    char a6 = "Sans and Papyrus";
+    char a7 = "Alphys";
+    char a8 = "Undyne";
+    char a9 = "Save Point";
+    char a10 = "Sans";
+    char a11 = "Asgore Dreemurr";
+    char a12 = "Mettaton";
+    char a13 = "Toriel";
+    char a14 = "Gold";
+    char a15 = "Megalovania";
+    char a16 = "Temmie";
+    char a17 = "Flowey";
+    char a18 = "Asriel Dreemurr";
+    char a19 = "Snowdin";
+    char a20 = "Letter";
+    char a21 = "ASGORE";
+    char a22 = "Waterfall";
+    char a23 = "Flowey";
+    char a24 = "Muffet";
+    char a25 = "Mettaton EX";
+    char a26 = "Annoying Dog";
+    char a27 = "Chara";
+    char a28 = "Hearthache";
 }
