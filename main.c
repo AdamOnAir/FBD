@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS;
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -38,7 +40,7 @@ int main(void) {
 
 
 const char* puns[] = {
-    "Why can't a bicycle stand up by itself? It's two tired!",
+        "Why can't a bicycle stand up by itself? It's two tired!",
         "What do you call a bear with no teeth? A gummy bear!",
         "Why do cows wear bells? Their horns don't work!",
         "What do you call a fake noodle? An impasta!",
