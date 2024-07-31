@@ -32,6 +32,7 @@ Run with `./fbd` in the directory. Or put it in PATH.
 ## Execute : MS Windows
 
 To execute on MS Windows, just download the executable from [the Releases section.](https://github.com/FBDev64/FBD/releases)
+But you can still compile with `cl` or CMake(problem with Make)
 
 ## Contributing
 
