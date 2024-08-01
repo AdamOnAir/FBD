@@ -16,6 +16,7 @@ Compile with GCC:
 git clone https://gitHub.com/FBDev64/FBD.git
 cd FBD
 gcc -o fbd main.c
++
 ```
 
 Compile with CMake:
@@ -27,12 +28,22 @@ cmake ..
 make
 ```
 
-Run with `./fbd` in the directory. Or put it in PATH.
+```bash
+# Add to PATH with bash
+echo "export PATH=$PATH:$PWD" >> ~/.bashrc
+source ~/.bashrc
+```
+
+```zsh
+# Add to PATH with zsh
+echo "export PATH=$PATH:$PWD" >> ~/.zshrc
+source ~/.zshrc
+```
 
 ## Execute : MS Windows
 
 To execute on MS Windows, just download the executable from [the Releases section.](https://github.com/FBDev64/FBD/releases)
-But you can still compile with `cl` or CMake(problem with Make)
+But you can still compile with `cl` or CMake.
 
 ## Contributing
 
@@ -43,7 +54,3 @@ to discuss what you would like to change.
 
 Distribute, modify and use freely under the terms of the
 [BSD 3-Clause “New” or “Revised” License](https://choosealicense.com/licenses/bsd-3-clause/).
-
-## Swaggy moment
-
-Made with Vim 😎.
