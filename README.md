@@ -9,7 +9,7 @@ FBD is a textual software in a Terminal Emulator designed for Linux. So read jok
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 <br>
 
-## Compile : Linux
+## Compile and Run
 
 Compile with GCC:
 ```bash
@@ -27,22 +27,9 @@ cmake ..
 make
 ```
 
-```bash
-# Add to PATH with bash
-echo "export PATH=$PATH:$PWD" >> ~/.bashrc
-source ~/.bashrc
-```
+MS Windows :
 
-```zsh
-# Add to PATH with zsh
-echo "export PATH=$PATH:$PWD" >> ~/.zshrc
-source ~/.zshrc
-```
-
-## Execute : MS Windows
-
-To execute on MS Windows, just download the executable from [the Releases section.](https://github.com/FBDev64/FBD/releases)
-But you can still compile with `cl` or CMake.
+To execute on MS Windows, just download the executable from [the Releases section.](https://github.com/FBDev64/FBD/releases).
 
 ## Contributing
 
