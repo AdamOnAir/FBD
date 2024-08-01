@@ -16,7 +16,6 @@ Compile with GCC:
 git clone https://gitHub.com/FBDev64/FBD.git
 cd FBD
 gcc -o fbd main.c
-+
 ```
 
 Compile with CMake:
