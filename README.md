@@ -29,7 +29,7 @@ make
 
 MS Windows :
 
-To execute on MS Windows, just download the executable from [the Releases section.](https://github.com/FBDev64/FBD/releases).
+To execute on MS Windows, just download the executable from [the Releases section.](https://github.com/FBDev64/FBD/releases)
 
 ## Contributing
 
