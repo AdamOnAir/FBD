@@ -4,4 +4,5 @@ project(FBD C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(FBD main.c
+        misc.h
         joke.h)

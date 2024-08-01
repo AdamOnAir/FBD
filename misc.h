@@ -4,7 +4,7 @@ char name[];
 int age;
 
 int data(void) {
-    printf("Welcome to the survey.");
+    printf("Welcome to the survey.\n");
 
     // Name
     printf("Name:\n ");
@@ -23,8 +23,6 @@ int data(void) {
 }
 
 int swag(void) {
-    printf("Made with Vim 😎.\n");
+    printf("Made with Vim!\n");
     return 0;
 }
-
-// 3310

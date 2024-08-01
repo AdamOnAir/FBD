@@ -1,7 +1,6 @@
 #include <stdlib.h>
 
-int joke(void);
-
+// Puns Vector
 const char* puns[] = {
         "Why can't a bicycle stand up by itself? It's two tired!",
         "What do you call a bear with no teeth? A gummy bear!",
@@ -39,6 +38,7 @@ const char* puns[] = {
         "I'm not lion, these puns are unbearable."
 };
 
+// Joke function
 int joke(void) {
     int num_puns = sizeof(puns) / sizeof(puns[0]);
     srand(time(NULL));
@@ -46,5 +46,3 @@ int joke(void) {
     printf("%s\n", puns[random_index]);
     return 0;
 }
-
-// Unicode
