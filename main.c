@@ -44,7 +44,6 @@ int main(void) {
         } else if (strcmp(input, "joke") == 0) {
             joke();
         } else if (strcmp(input, "exit") == 0) {
-
             printf("Bye bye!\n");
             break;
         } else if (strcmp(input, "issue") == 0) {

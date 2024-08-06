@@ -57,3 +57,4 @@ dkms.conf
 .vscode
 .vscode-ctages
 /.vscode-ctags
+/cmake-build-debug
