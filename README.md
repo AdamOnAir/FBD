@@ -12,14 +12,14 @@ FBD is a textual software in a Terminal Emulator designed for Linux. So read jok
 ## Compile and Run
 
 Compile with GCC:
-```bash
+```
 git clone https://gitHub.com/FBDev64/FBD.git
 cd FBD
 gcc -o fbd main.c
 ```
 
 Compile with CMake:
-```bash
+```
 git clone https://gitHub.com/FBDev64/FBD.git
 cd FBD
 mkdir build && cd build
@@ -29,7 +29,7 @@ make
 
 MS Windows :
 
-To execute on MS Windows, just download the executable from [the Releases section.](https://github.com/FBDev64/FBD/releases)
+Precompiled MS Windows executabes an b downloaded from [the Releases section.](https://github.com/FBDev64/FBD/releases)
 
 ## Contributing
 
