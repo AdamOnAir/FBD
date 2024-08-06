@@ -27,9 +27,7 @@ cmake ..
 make
 ```
 
-MS Windows :
-
-Precompiled MS Windows executabes an b downloaded from [the Releases section.](https://github.com/FBDev64/FBD/releases)
+Precompiled MS Windows executabes can be downloaded from [the Releases section.](https://github.com/FBDev64/FBD/releases)
 
 ## Contributing
 
