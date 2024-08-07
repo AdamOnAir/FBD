@@ -54,7 +54,7 @@ dkms.conf
 # Editors
 .vs
 .idea
-.vscode
-.vscode-ctages
-/.vscode-ctags
 /cmake-build-debug
+
+# Project IDX
+dev.nix

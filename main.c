@@ -10,7 +10,7 @@ char konami_code[] = "uuddlrlrba";
 
 int main(void) {
 
-    printf("To properly understand those jokes, you need to know Undertale.");
+    printf("To properly understand those jokes, you need to know Undertale.\n");
     printf("Read puns, that's it...\n");
 
     char input[10];
