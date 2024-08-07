@@ -54,7 +54,10 @@ dkms.conf
 # Editors
 .vs
 .idea
+
+# Build
 /cmake-build-debug
+build/
 
 # Project IDX
 dev.nix
