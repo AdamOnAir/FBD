@@ -1,8 +1,8 @@
 # FBD
 
-FBD is a textual software in a Terminal Emulator designed for Linux. So read jokes, and get the current time, that's it.
+You have a very long quest.. that starts with installing this software ! 
+<br>You will discover secrets.. get the time.. read jokes..
 
-## Technical Badges
 
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
