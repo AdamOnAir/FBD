@@ -40,7 +40,7 @@ int main(void) {
 
         // Command check
         if (strcmp(input, "help") == 0) {
-            printf("Commands : joke, name, time, issue, exit\n");
+            printf("Commands : joke, name, time, exit\n");
         } else if (strcmp(input, "joke") == 0) {
             joke();
         } else if (strcmp(input, "name") == 0) {
@@ -48,8 +48,6 @@ int main(void) {
         } else if (strcmp(input, "exit") == 0) {
             printf("* I'm outta here.\n");
             break;
-        } else if (strcmp(input, "issue") == 0) {
-            printf("Report issue at https://github.com/fbdev64/FBD\n");
         } else if (strcmp(input, "time") == 0) {
             time_t rawtime;
             struct tm *timeinfo;
