@@ -35,16 +35,18 @@ int main(void) {
         }
 
         // Prompt and input
-        printf("(fbd) ");
+        printf(">>> ");
         scanf("%s", input);
 
         // Command check
         if (strcmp(input, "help") == 0) {
-            printf("Commands : joke, exit, issue, time, survey\n");
+            printf("Commands : joke, name, time, issue, exit\n");
         } else if (strcmp(input, "joke") == 0) {
             joke();
+        } else if (strcmp(input, "name") == 0) {
+            get_name();
         } else if (strcmp(input, "exit") == 0) {
-            printf("Bye bye!\n");
+            printf("* I'm outta here.\n");
             break;
         } else if (strcmp(input, "issue") == 0) {
             printf("Report issue at https://github.com/fbdev64/FBD\n");
@@ -54,8 +56,6 @@ int main(void) {
             time(&rawtime);
             timeinfo = localtime(&rawtime);
             printf("The time is %d:%d:%d\n", timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
-        } else if (strcmp(input, "survey") == 0) {
-            data();
         } else if (strcmp(input, "editor") == 0) {
             swag();
         } else if (strcmp(input, konami_code) == 0) {

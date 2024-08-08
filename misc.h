@@ -1,25 +1,11 @@
 #include <stdio.h>
 
 char name[];
-int age;
 
-int data(void) {
-    printf("Welcome to the survey.\n");
-
-    // Name
-    printf("Name:\n ");
-    printf("(data) ");
-    scanf("%s", name);
-
-    // Age
-    printf("Age: \n");
-    printf("(data) ");
-    scanf("%d", &age);
-
-    // Realization
-    printf("Useless infos.\n");
-
-    return 0;
+int get_name(void) {
+  printf("Enter your name :\n");
+  scanf("%s", name);
+  return 0;
 }
 
 int swag(void) {
