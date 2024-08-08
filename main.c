@@ -1,8 +1,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <time.h>
-#include "joke.h"
-#include "misc.h"
+#include "include/joke.h"
+#include "include/usr.h"
 
 // Konami Code and wrong commands
 int wrong_cmd;
