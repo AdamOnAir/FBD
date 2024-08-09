@@ -31,7 +31,7 @@ int main(void) {
             printf("Okay, make as many errors as you want.");
         } else if (wrong_cmd == 100) {
             printf("You gay.");
-            break;
+            break; // TODO : Exit with segfault.
         }
 
         // Prompt and input
