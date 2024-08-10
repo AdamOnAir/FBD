@@ -51,13 +51,15 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# Editors
+# IDE
 .vs
 .idea
+build
+.vscode/tasks.json
+dev.nix
 
 # Build
 /cmake-build-debug
 build/
 
-# Project IDX
-dev.nix
+

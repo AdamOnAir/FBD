@@ -8,30 +8,37 @@
 int wrong_cmd;
 char konami_code[] = "uuddlrlrba";
 
+
+int time_local(void) {
+    time_t rawtime;
+    struct tm *timeinfo;
+    time(&rawtime);
+    timeinfo = localtime(&rawtime);
+    printf("The time is %d:%d:%d\n", timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
+}
+
 int main(void) {
 
     printf("To properly understand those jokes, you need to know Undertale.\n");
-    printf("Read puns, that's it...\n");
 
     char input[10];
     while (1) {
 
-        // Check how many wrong inputs there is, if 20 prints RTFM.
         if (wrong_cmd == 20) {
             printf("RTFM!\n");
         } else if (wrong_cmd == 30) {
-            printf("Hey, it's 30 wrong commands. There's a help command int the program.");
+            printf("Hey, it's 30 wrong commands. There's a help command int the program.\n");
         } else if (wrong_cmd == 30) {
-            printf("You're driving a program insane.");
+            printf("You're driving a program insane.\n");
         } else if (wrong_cmd == 40) {
-            printf("Stop it.");
+            printf("Stop it.\n");
         } else if (wrong_cmd == 50) {
-            printf("I'm warning you.");
+            printf("I'm warning you.\n");
         } else if (wrong_cmd == 60) {
-            printf("Okay, make as many errors as you want.");
+            printf("Okay, make as many errors as you want.\n");
         } else if (wrong_cmd == 100) {
-            printf("You gay.");
-            break; // TODO : Exit with segfault.
+            int *ptr = NULL;
+            *ptr = 7;
         }
 
         // Prompt and input
@@ -49,11 +56,7 @@ int main(void) {
             printf("* I'm outta here.\n");
             break;
         } else if (strcmp(input, "time") == 0) {
-            time_t rawtime;
-            struct tm *timeinfo;
-            time(&rawtime);
-            timeinfo = localtime(&rawtime);
-            printf("The time is %d:%d:%d\n", timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
+            time_local();
         } else if (strcmp(input, "editor") == 0) {
             swag();
         } else if (strcmp(input, konami_code) == 0) {
@@ -66,5 +69,5 @@ int main(void) {
         }
     }
 
-    return 0;
+    
 }
