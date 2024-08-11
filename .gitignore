@@ -51,10 +51,6 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# Editors
 .vs
 .idea
 .vscode
-.vscode-ctages
-/.vscode-ctags
-/cmake-build-debug
