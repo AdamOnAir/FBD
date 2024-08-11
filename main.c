@@ -1,23 +1,20 @@
 #include <string.h>
 #include <stdio.h>
-#include <time.h>
 #include "include/joke.h"
-#include "include/usr.h"
+#include "include/airlib.h"
 
 // Konami Code and wrong commands
 int wrong_cmd;
 char konami_code[] = "uuddlrlrba";
 
-
 int time_local(void) {
-    time_t rawtime;
-    struct tm *timeinfo;
-    time(&rawtime);
-    timeinfo = localtime(&rawtime);
-    printf("The time is %d:%d:%d\n", timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
+    int t = GetGameTime();
+    return t;
 }
 
 int main(void) {
+
+    InitWindow();
 
     printf("To properly understand those jokes, you need to know Undertale.\n");
 
@@ -37,8 +34,7 @@ int main(void) {
         } else if (wrong_cmd == 60) {
             printf("Okay, make as many errors as you want.\n");
         } else if (wrong_cmd == 100) {
-            int *ptr = NULL;
-            *ptr = 7;
+            SegFault();
         }
 
         // Prompt and input
@@ -47,27 +43,55 @@ int main(void) {
 
         // Command check
         if (strcmp(input, "help") == 0) {
-            printf("Commands : joke, name, time, exit\n");
+            DisplayH2("joke, time, \n", "red");
         } else if (strcmp(input, "joke") == 0) {
             joke();
         } else if (strcmp(input, "name") == 0) {
-            get_name();
+            DisplayBlueColor("Your name ? Useless info.\n");
         } else if (strcmp(input, "exit") == 0) {
             printf("* I'm outta here.\n");
             break;
         } else if (strcmp(input, "time") == 0) {
             time_local();
-        } else if (strcmp(input, "editor") == 0) {
-            swag();
         } else if (strcmp(input, konami_code) == 0) {
             printf("https://pastebin.com/v4vtCuC3\n");
             printf("3310\n");
             printf("Unicode\n");
-        } else {
+        } else if (strcmp(input, "cpp") == 0) {
+            SegFault();
+        } else if (strcmp(input, "c") == 0) {
+            SegFault();
+        } else if (strcmp(input, "java") == 0) {
+            SegFault();
+        } else if (strcmp(input, "python") == 0) {
+            SegFault();
+        } else if (strcmp(input, "c#") == 0) {
+            SegFault();
+        } else if (strcmp(input, "c++") == 0) {
+            SegFault();
+        } else if (strcmp(input, "javascript") == 0) {
+            SegFault();
+        } else if (strcmp(input, "php") == 0) {
+            SegFault();
+        } else if (strcmp(input, "ruby") == 0) {
+            SegFault();
+        } else if (strcmp(input, "html") == 0) {
+            SegFault();
+        } else if (strcmp(input, "css") == 0) {
+            SegFault();
+        } else if (strcmp(input, "sql") == 0) {
+            SegFault();
+        } else if (strcmp(input, "swift") == 0) {
+            SegFault();
+        } else if (strcmp(input, "kotlin") == 0) {
+            SegFault();
+        }
+
+        else {
             wrong_cmd++;
             printf("Unknown command!\n");
         }
     }
 
-    
+    CloseWindow();
 }

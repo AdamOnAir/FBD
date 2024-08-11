@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <time.h>
 
 // Puns Vector
 const char* puns[] = {

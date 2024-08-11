@@ -4,5 +4,5 @@ project(FBD C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(FBD main.c
-        include/usr.h
-        include/joke.h)
+        include/joke.h
+        include/airlib.c)
