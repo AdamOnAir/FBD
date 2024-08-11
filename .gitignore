@@ -51,6 +51,15 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# IDE
 .vs
 .idea
-.vscode
+build
+.vscode/tasks.json
+dev.nix
+
+# Build
+/cmake-build-debug
+build/
+
+

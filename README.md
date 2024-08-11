@@ -1,13 +1,14 @@
 # FBD
 
-FBD is a textual software in a Terminal Emulator designed for Linux. So read jokes, and get the current time, that's it.
-
-## Technical Badges
-
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-<br>
+
+You have a very long quest.. that starts with installing this software ! 
+<br>You will discover secrets.. get the time.. read jokes.. <br>
+
+
+
 
 ## Compile and Run
 
@@ -27,9 +28,7 @@ cmake ..
 make
 ```
 
-MS Windows :
-
-Precompiled MS Windows executabes an b downloaded from [the Releases section.](https://github.com/FBDev64/FBD/releases)
+Precompiled MS Windows executabes can be downloaded from [the Releases section.](https://github.com/FBDev64/FBD/releases)
 
 ## Contributing
 
