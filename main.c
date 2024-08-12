@@ -59,35 +59,7 @@ int main(void) {
             printf("Unicode\n");
         } else if (strcmp(input, "cpp") == 0) {
             SegFault();
-        } else if (strcmp(input, "c") == 0) {
-            SegFault();
-        } else if (strcmp(input, "java") == 0) {
-            SegFault();
-        } else if (strcmp(input, "python") == 0) {
-            SegFault();
-        } else if (strcmp(input, "c#") == 0) {
-            SegFault();
-        } else if (strcmp(input, "c++") == 0) {
-            SegFault();
-        } else if (strcmp(input, "javascript") == 0) {
-            SegFault();
-        } else if (strcmp(input, "php") == 0) {
-            SegFault();
-        } else if (strcmp(input, "ruby") == 0) {
-            SegFault();
-        } else if (strcmp(input, "html") == 0) {
-            SegFault();
-        } else if (strcmp(input, "css") == 0) {
-            SegFault();
-        } else if (strcmp(input, "sql") == 0) {
-            SegFault();
-        } else if (strcmp(input, "swift") == 0) {
-            SegFault();
-        } else if (strcmp(input, "kotlin") == 0) {
-            SegFault();
-        }
-
-        else {
+        } else {
             wrong_cmd++;
             printf("Unknown command!\n");
         }
