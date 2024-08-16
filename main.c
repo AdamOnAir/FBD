@@ -3,6 +3,9 @@
 #include "include/joke.h"
 #include "include/airlib.h"
 
+#elif __APPLE__
+   SegFault();
+
 // Konami Code and wrong commands
 int wrong_cmd;
 char konami_code[] = "uuddlrlrba";
