@@ -3,8 +3,9 @@
 #include "include/joke.h"
 #include "include/airlib.h"
 
-#elif __APPLE__
+#if __APPLE__
    SegFault();
+#endif
 
 // Konami Code and wrong commands
 int wrong_cmd;
@@ -46,7 +47,7 @@ int main(void) {
 
         // Command check
         if (strcmp(input, "help") == 0) {
-            DisplayH2("joke, time, \n", "red");
+            DisplayH2("joke, time, exit \n", "red");
         } else if (strcmp(input, "joke") == 0) {
             joke();
         } else if (strcmp(input, "name") == 0) {
