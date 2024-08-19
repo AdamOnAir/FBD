@@ -1,4 +1,3 @@
-#include "airlib.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -9,12 +8,6 @@
 
 #ifndef PI
 #define PI 3.14159265358979323846f
-#endif
-#ifndef DEG2RAD
-#define DEG2RAD (PI/180.0f)
-#endif
-#ifndef RAD2DEG
-#define RAD2DEG (180.0f/PI)
 #endif
 
 #define KNRM  "\x1B[0m"
@@ -58,36 +51,12 @@ void DisplayWhiteColor(char *txt) {
     printf("%s%s%s\n", KWHT, txt, KNRM);
 }
 
-void DisplayColor(char *txt, char *color) {
-    printf("%s%s%s\n", color, txt, KNRM);
-}
-
-void DisplayH1(char *txt, char *color) {
+void DisplayTitle(char *txt, char *color) {
     printf("%s# %s%s\n", color, txt, KNRM);
 }
 
-void DisplayH2(char *txt, char *color) {
+void DisplaySubTitle(char *txt, char *color) {
     printf("%s## %s%s\n", color, txt, KNRM);
-}
-
-void DisplayH3(char *txt, char *color) {
-    printf("%s### %s%s\n", color, txt, KNRM);
-}
-
-void DisplayH4(char *txt, char *color) {
-    printf("%s#### %s%s\n", color, txt, KNRM);
-}
-
-void DisplayH5(char *txt, char *color) {
-    printf("%s##### %s%s\n", color, txt, KNRM);
-}
-
-void DisplayH6(char *txt, char *color) {
-    printf("%s###### %s%s\n", color, txt, KNRM);
-}
-
-void DisplayBreakLineDash() {
-        printf("\n---------------------------------------------------\n");
 }
 
 void DisplayBreakLine() {
@@ -98,7 +67,7 @@ void DisplayBreakLine() {
 // Window
 // ------------------------------------------------
 
-void InitWindow() {
+void InitWindow() { // This one is just for code readability
     system("@cls||clear");
 }
 
@@ -107,6 +76,9 @@ void CloseWindowNy() {
     char ny;
     printf("Do you want to close window? (y/n) ");
     scanf("%s", &ny);
+    if (ny == 'y' || ny == 'Y') {
+        exit(0);
+    }
 }
 
 void CloseWindow() {
@@ -139,4 +111,104 @@ float GetGameTime() {
     time(&rawtime);
     timeinfo = localtime(&rawtime);
     printf("The time is %d:%d:%d\n", timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
+}
+
+// ------------------------------------------------
+// Drawing
+// ------------------------------------------------
+
+void DrawRedLine() {
+    printf("%s-----------------%s\n", KRED, KNRM);
+}
+
+void DrawGreenLine() {
+    printf("%s-----------------%s\n", KGRN, KNRM);
+}
+
+void DrawYellowLine() {
+    printf("%s-----------------%s\n", KYEL, KNRM);
+}
+
+void DrawBlueLine() {
+    printf("%s-----------------%s\n", KBLU, KNRM);
+}
+
+void DrawMagentaLine() {
+    printf("%s-----------------%s\n", KMAG, KNRM);
+}
+
+void DrawCyanLine() {
+    printf("%s-----------------%s\n", KCYN, KNRM);
+}
+
+void DrawWhiteLine() {
+    printf("%s-----------------%s\n", KWHT, KNRM);
+}
+
+void DrawRedPolygon(int sides) {
+    printf("%s", KRED);
+    for (int i = 0; i < sides; i++) {
+        printf("*---");
+    }
+    printf("*%s\n", KNRM);
+}
+
+void DrawGreenPolygon(int sides) {
+    printf("%s", KGRN);
+    for (int i = 0; i < sides; i++) {
+        printf("*---");
+    }
+    printf("*%s\n", KNRM);
+}
+
+void DrawYellowPolygon(int sides) {
+    printf("%s", KYEL);
+    for (int i = 0; i < sides; i++) {
+        printf("*---");
+    }
+    printf("*%s\n", KNRM);
+}
+
+void DrawBluePolygon(int sides) {
+    printf("%s", KBLU);
+    for (int i = 0; i < sides; i++) {
+        printf("*---");
+    }
+    printf("*%s\n", KNRM);
+}
+
+void DrawMagentaPolygon(int sides) {
+    printf("%s", KMAG);
+    for (int i = 0; i < sides; i++) {
+        printf("*---");
+    }
+    printf("*%s\n", KNRM);
+}
+
+void DrawCyanPolygon(int sides) {
+    printf("%s", KCYN);
+    for (int i = 0; i < sides; i++) {
+        printf("*---");
+    }
+    printf("*%s\n", KNRM);
+}
+
+void DrawWhitePolygon(int sides) {
+    printf("%s", KWHT);
+    for (int i = 0; i < sides; i++) {
+        printf("*---");
+    }
+    printf("*%s\n", KNRM);
+}
+
+// ------------------------------------------------
+// Math
+// ------------------------------------------------
+
+float DEG2RAD(float deg) {
+    return deg * PI / 180.0f;
+}
+
+float RAD2DEG(float rad) {
+    return rad * 180.0f / PI;
 }

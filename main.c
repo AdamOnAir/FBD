@@ -47,13 +47,13 @@ int main(void) {
 
         // Command check
         if (strcmp(input, "help") == 0) {
-            DisplayH2("joke, time, exit \n", "red");
+            DisplayBlueColor("joke, time, exit \n");
         } else if (strcmp(input, "joke") == 0) {
             joke();
         } else if (strcmp(input, "name") == 0) {
             DisplayBlueColor("Your name ? Useless info.\n");
         } else if (strcmp(input, "exit") == 0) {
-            printf("* I'm outta here.\n");
+            DisplayRedColor("* I'm outta here.\n");
             break;
         } else if (strcmp(input, "time") == 0) {
             time_local();
