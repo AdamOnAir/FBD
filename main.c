@@ -3,10 +3,6 @@
 #include "include/joke.h"
 #include "include/airlib.h"
 
-#if __APPLE__
-   SegFault();
-#endif
-
 // Konami Code and wrong commands
 int wrong_cmd;
 char konami_code[] = "uuddlrlrba";
@@ -17,8 +13,6 @@ int time_local(void) {
 }
 
 int main(void) {
-
-    InitWindow();
 
     printf("To properly understand those jokes, you need to know Undertale.\n");
 
@@ -38,7 +32,7 @@ int main(void) {
         } else if (wrong_cmd == 60) {
             printf("Okay, make as many errors as you want.\n");
         } else if (wrong_cmd == 100) {
-            SegFault();
+            richText("Where are the Knives ?", KRED, 1, 0, 0);
         }
 
         // Prompt and input
@@ -51,9 +45,9 @@ int main(void) {
         } else if (strcmp(input, "joke") == 0) {
             joke();
         } else if (strcmp(input, "name") == 0) {
-            DisplayBlueColor("Your name ? Useless info.\n");
+            richText("Your name ? Useless info.\n", KBLU, 0,0,0);
         } else if (strcmp(input, "exit") == 0) {
-            DisplayRedColor("* I'm outta here.\n");
+            richText("* I'm outta here.\n", KRED, 1, 0, 0);
             break;
         } else if (strcmp(input, "time") == 0) {
             time_local();
@@ -69,5 +63,5 @@ int main(void) {
         }
     }
 
-    CloseWindow();
+    exit(0);
 }
