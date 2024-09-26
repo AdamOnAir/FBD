@@ -1,111 +1,70 @@
-#include <stdio.h>
+/* Copyright (c) 2024 Adam Ellouze. All Rights Reserved. */
+
+#include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
+#include "library.h"
 
-// ------------------------------------------------
-// Some Basic Info
-// ------------------------------------------------
+// ------------------------------------
+// Error handling
+// ------------------------------------
 
-#ifndef PI
-#define PI 3.14159265358979323846f
-#endif
+char *errorLog(char *text, unsigned int error, unsigned int warn, unsigned int info) {
 
-#define KNRM  "\x1B[0m"
-#define KRED  "\x1B[31m"
-#define KGRN  "\x1B[32m"
-#define KYEL  "\x1B[33m"
-#define KBLU  "\x1B[34m"
-#define KMAG  "\x1B[35m"
-#define KCYN  "\x1B[36m"
-#define KWHT  "\x1B[37m"
+  // Color
+  if (error) printf(KRED);
+  if (warn) printf(KYEL);
+  if (info) printf(KBLU);
 
-// -------------------------------------------------
+  // Text
+  if (error) printf("error: ");
+  if (warn) printf("warn: ");
+  if (info) printf("info: ");
+  printf("%s", text);
+
+  printf(KNRM);
+}
+
+// ------------------------------------
 // Color and Strings
-// -------------------------------------------------
+// ------------------------------------
 
-void DisplayRedColor(char *txt) {
-    printf("%s%s%s\n", KRED, txt, KNRM);
-}
-
-void DisplayGreenColor(char *txt) {
-    printf("%s%s%s\n", KGRN, txt, KNRM);
-}
-
-void DisplayYellowColor(char *txt) {
-    printf("%s%s%s\n", KYEL, txt, KNRM);
-}
-
-void DisplayBlueColor(char *txt) {
-    printf("%s%s%s\n", KBLU, txt, KNRM);
-}
-
-void DisplayMagentaColor(char *txt) {
-    printf("%s%s%s\n", KMAG, txt, KNRM);
-}
-
-void DisplayCyanColor(char *txt) {
-    printf("%s%s%s\n", KCYN, txt, KNRM);
-}
-
-void DisplayWhiteColor(char *txt) {
-    printf("%s%s%s\n", KWHT, txt, KNRM);
-}
-
-void DisplayTitle(char *txt, char *color) {
-    printf("%s# %s%s\n", color, txt, KNRM);
-}
-
-void DisplaySubTitle(char *txt, char *color) {
-    printf("%s## %s%s\n", color, txt, KNRM);
-}
-
-void DisplayBreakLine() {
+void richText(char *text, char *color, unsigned int bold, unsigned int italic, unsigned int underline) {
+    printf("%s", color);
+    if (bold) printf("\033[1m");
+    if (italic) printf("\033[3m");
+    if (underline) printf("\033[4m");
+    printf("%s", text);
+    printf(KNRM);  // Reset to normal
     printf("\n");
 }
 
-// ------------------------------------------------
+// ------------------------------------
 // Window
-// ------------------------------------------------
+// ------------------------------------
 
-void InitWindow() { // This one is just for code readability
-    system("@cls||clear");
-}
-
-void CloseWindowNy() {
-    // User want to close window if else
-    char ny;
-    printf("Do you want to close window? (y/n) ");
-    scanf("%s", &ny);
-    if (ny == 'y' || ny == 'Y') {
-        exit(0);
-    }
-}
-
-void CloseWindow() {
-    exit(0);
-}
-
-void SegFault() {
+void segFault() {
     int *p = NULL;
     *p = 1;
 }
 
 void clrscr() {
-    system("@cls||clear");
+    printf(KCLS);  // This clears the screen
 }
 
-// ------------------------------------------------
+// ------------------------------------
 // Clock and Time
-// ------------------------------------------------
+// ------------------------------------
 
-void SysSleep(int ms) {
+void sysSleep(int ms) {
     clock_t goal = ms * CLOCKS_PER_SEC / 1000;
     clock_t start = clock();
     while (clock() < goal) {
     }
 }
 
-float GetGameTime() {
+float getGameTime() {
     time_t rawtime;
     struct tm *timeinfo;
     time(&rawtime);
@@ -113,102 +72,24 @@ float GetGameTime() {
     printf("The time is %d:%d:%d\n", timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
 }
 
-// ------------------------------------------------
+float stopWatch() {
+    clock_t start = clock();
+    clock_t end = clock();
+    float seconds = (float) (end - start) / CLOCKS_PER_SEC;
+    return seconds;
+}
+
+// ------------------------------------
 // Drawing
-// ------------------------------------------------
+// ------------------------------------
 
-void DrawRedLine() {
-    printf("%s-----------------%s\n", KRED, KNRM);
-}
-
-void DrawGreenLine() {
-    printf("%s-----------------%s\n", KGRN, KNRM);
-}
-
-void DrawYellowLine() {
-    printf("%s-----------------%s\n", KYEL, KNRM);
-}
-
-void DrawBlueLine() {
-    printf("%s-----------------%s\n", KBLU, KNRM);
-}
-
-void DrawMagentaLine() {
-    printf("%s-----------------%s\n", KMAG, KNRM);
-}
-
-void DrawCyanLine() {
-    printf("%s-----------------%s\n", KCYN, KNRM);
-}
-
-void DrawWhiteLine() {
-    printf("%s-----------------%s\n", KWHT, KNRM);
-}
-
-void DrawRedPolygon(int sides) {
-    printf("%s", KRED);
-    for (int i = 0; i < sides; i++) {
-        printf("*---");
+void drawBox(int x, int y, int width, int height, char *color) {
+    printf("%s", color);
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            printf("*");
+        }
+        printf("\n");
     }
-    printf("*%s\n", KNRM);
-}
-
-void DrawGreenPolygon(int sides) {
-    printf("%s", KGRN);
-    for (int i = 0; i < sides; i++) {
-        printf("*---");
-    }
-    printf("*%s\n", KNRM);
-}
-
-void DrawYellowPolygon(int sides) {
-    printf("%s", KYEL);
-    for (int i = 0; i < sides; i++) {
-        printf("*---");
-    }
-    printf("*%s\n", KNRM);
-}
-
-void DrawBluePolygon(int sides) {
-    printf("%s", KBLU);
-    for (int i = 0; i < sides; i++) {
-        printf("*---");
-    }
-    printf("*%s\n", KNRM);
-}
-
-void DrawMagentaPolygon(int sides) {
-    printf("%s", KMAG);
-    for (int i = 0; i < sides; i++) {
-        printf("*---");
-    }
-    printf("*%s\n", KNRM);
-}
-
-void DrawCyanPolygon(int sides) {
-    printf("%s", KCYN);
-    for (int i = 0; i < sides; i++) {
-        printf("*---");
-    }
-    printf("*%s\n", KNRM);
-}
-
-void DrawWhitePolygon(int sides) {
-    printf("%s", KWHT);
-    for (int i = 0; i < sides; i++) {
-        printf("*---");
-    }
-    printf("*%s\n", KNRM);
-}
-
-// ------------------------------------------------
-// Math
-// ------------------------------------------------
-
-float DEG2RAD(float deg) {
-    return deg * PI / 180.0f;
-}
-
-float RAD2DEG(float rad) {
-    return rad * 180.0f / PI;
+    printf(KNRM);  // Reset to normal
 }
