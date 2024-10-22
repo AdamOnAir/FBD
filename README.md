@@ -14,14 +14,14 @@ You have a very long quest.. that starts with installing this software !
 
 Compile with GCC:
 ```
-git clone https://gitHub.com/FBDev64/FBD.git
+git clone https://gitHub.com/AdamOnAir/FBD.git
 cd FBD
 gcc -o fbd main.c
 ```
 
 Compile with CMake:
 ```
-git clone https://gitHub.com/FBDev64/FBD.git
+git clone https://gitHub.com/AdamOnAir/FBD.git
 cd FBD
 mkdir build && cd build
 cmake ..
